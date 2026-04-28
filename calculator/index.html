@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="calculator">
+    <div class="display">
+        <div class="history hidden" id="history"></div>
+        <div class="current" id="display">0</div>
+    </div>
+    <div class="buttons">
+
+        <button class="btn-gray" onclick="backspace()">
+            <svg class="backspace-icon" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1H27C28.1 1 29 1.9 29 3V17C29 18.1 28.1 19 27 19H11L2 10L11 1Z"
+                      stroke="#000" stroke-width="1.6" fill="none"/>
+                <line x1="13" y1="6" x2="23" y2="14" stroke="#000" stroke-width="1.6" stroke-linecap="round"/>
+                <line x1="23" y1="6" x2="13" y2="14" stroke="#000" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+        </button>
+
+        <button class="btn-gray" onclick="clearDisplay()">AC</button>
+        <button class="btn-gray" onclick="setOperator('%')">%</button>
+        <button class="btn-orange" onclick="setOperator('/')">÷</button>
+
+        <button class="btn-dark" onclick="appendNumber('7')">7</button>
+        <button class="btn-dark" onclick="appendNumber('8')">8</button>
+        <button class="btn-dark" onclick="appendNumber('9')">9</button>
+        <button class="btn-orange" onclick="setOperator('*')">×</button>
+
+        <button class="btn-dark" onclick="appendNumber('4')">4</button>
+        <button class="btn-dark" onclick="appendNumber('5')">5</button>
+        <button class="btn-dark" onclick="appendNumber('6')">6</button>
+        <button class="btn-orange" onclick="setOperator('-')">−</button>
+
+        <button class="btn-dark" onclick="appendNumber('1')">1</button>
+        <button class="btn-dark" onclick="appendNumber('2')">2</button>
+        <button class="btn-dark" onclick="appendNumber('3')">3</button>
+        <button class="btn-orange" onclick="setOperator('+')">+</button>
+
+        <button class="btn-dark" onclick="toggleSign()">+/-</button>
+        <button class="btn-dark" onclick="appendNumber('0')">0</button>
+        <button class="btn-dark" onclick="appendNumber(',')">،</button>
+        <button class="btn-orange" onclick="calculate()">=</button>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
